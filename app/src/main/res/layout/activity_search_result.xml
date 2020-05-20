@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ln.base.view.TitleBar
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:text="" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="34dp"
+                android:paddingBottom="@dimen/spacing_normal">
+
+                <TextView
+                    android:id="@+id/tv_garbage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_normal"
+                    android:text="@string/beyond" />
+
+                <ImageView
+                    android:id="@+id/iv_type_icon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal" />
+
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:text=""
+                    android:textSize="@dimen/size_big" />
+
+                <TextView
+                    android:id="@+id/tv_type_extra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/size_big" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/spacing_bigger"
+                    android:paddingTop="@dimen/spacing_biggest"
+                    android:paddingBottom="@dimen/spacing_big"
+                    android:text="@string/delivery_requirements"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_type_tip_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/spacing_smaller"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/spacing_bigger"
+                    android:paddingBottom="@dimen/spacing_small"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_type_tip_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/spacing_smaller"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/spacing_bigger"
+                    android:paddingBottom="@dimen/spacing_small"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_type_tip_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/spacing_smaller"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/spacing_bigger"
+                    android:paddingBottom="@dimen/spacing_bigger"
+                    android:text="" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

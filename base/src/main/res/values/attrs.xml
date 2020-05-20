@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 解决软键盘 -->
+    <declare-styleable name="KPSwitchPanelLayout">
+        <attr name="ignore_recommend_height" format="boolean" />
+    </declare-styleable>
+
+    <!-- Dialog -->
+    <attr name="dialogStyle" format="reference" />
+    <attr name="dialogTransparentStyle" format="reference" />
+    <attr name="dialogTitleStyle" format="reference" />
+    <attr name="dialogAlertStyle" format="reference" />
+    <attr name="dialogInputStyle" format="reference" />
+    <attr name="dialogButtonStyle" format="reference" />
+    <attr name="dialogButtonLeftStyle" format="reference" />
+    <attr name="dialogButtonRightStyle" format="reference" />
+    <attr name="toastDialogStyle" format="reference" />
+    <attr name="toastDialogIconStyle" format="reference" />
+    <attr name="toastDialogTextStyle" format="reference" />
+
+    <!-- Wheek Picker -->
+    <attr name="wheelPickerStyle" format="reference" />
+
+    <declare-styleable name="WheelPicker">
+        <attr name="selectedTextSize" format="dimension|reference" />
+        <attr name="android:textColorHighlight" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:hint" />
+        <attr name="android:textColorHint" />
+        <attr name="hintSpacing" format="dimension" />
+        <attr name="android:gravity" />
+        <attr name="android:divider" />
+        <attr name="android:dividerHeight" />
+        <attr name="dividerOffset" format="dimension" />
+        <attr name="android:lines" />
+        <attr name="android:lineSpacingExtra" />
+        <attr name="android:foreground" />
+        <attr name="android:fadingEdgeLength" />
+        <attr name="fadingEdgeColor" format="color|reference" />
+        <attr name="cyclic" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleMeter">
+        <attr name="backgroundColor" format="color|reference" />
+        <attr name="scaleColor" format="color|reference" />
+        <attr name="scaleTextColor" format="color|reference" />
+        <attr name="insideCircleColor" format="color|reference" />
+        <attr name="pointerColor" format="color|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="scaleTextSize" format="dimension|reference" />
+        <attr name="textSize" format="dimension|reference" />
+    </declare-styleable>
+
+    <!-- Date Picker -->
+    <declare-styleable name="DatePicker">
+        <attr name="dateRange">
+            <enum name="normal" value="0" />
+            <!-- 从今往后 -->
+            <enum name="fromToday" value="1" />
+            <!-- 至此为止 -->
+            <enum name="toToday" value="2" />
+        </attr>
+        <!-- 古往今来 -->
+        <attr name="yearRange" format="integer" min="1" />
+    </declare-styleable>
+
+
+    <!-- Pager Indicator -->
+    <attr name="pagerIndicatorStyle" format="reference" />
+
+    <declare-styleable name="PagerIndicator">
+        <attr name="android:drawable" />
+        <attr name="android:spacing" />
+        <attr name="fromAlpha" format="float" />
+        <attr name="toAlpha" format="float" />
+        <attr name="fromScaleX" format="float" />
+        <attr name="fromScaleY" format="float" />
+        <attr name="toScaleX" format="float" />
+        <attr name="toScaleY" format="float" />
+        <attr name="transition">
+            <enum name="fade" value="0" />
+            <enum name="scale" value="1" />
+            <enum name="slide" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!-- List View -->
+    <declare-styleable name="ListView">
+        <attr name="android:hint" />
+        <attr name="android:textColorHint" />
+        <attr name="textSizeHint" format="dimension" />
+        <attr name="emptyViewTip" format="dimension" />
+        <attr name="emptyViewIcon" format="dimension" />
+    </declare-styleable>
+
+    <!-- Loading View -->
+    <attr name="loadingViewStyle" format="reference" />
+
+    <declare-styleable name="LoadingView">
+        <attr name="android:text" />
+        <attr name="android:src" />
+    </declare-styleable>
+
+    <!-- title bar -->
+    <attr name="titleBarStyle" format="reference" />
+
+    <declare-styleable name="TitleBar">
+        <attr name="android:text" />
+        <attr name="android:textColor" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="leftExtraIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="rightExtraIcon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="TitleBox">
+        <attr name="titleIcon" format="reference" />
+    </declare-styleable>
+
+    <!-- preference view -->
+    <attr name="preferenceStyle" format="reference" />
+
+    <declare-styleable name="Preference">
+        <attr name="android:text" />
+        <attr name="android:hint" />
+        <attr name="android:src" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:drawableLeft" />
+        <attr name="android:drawablePadding" />
+    </declare-styleable>
+
+    <!--共用属性-->
+    <attr name="drawableWidth" format="dimension|reference" />
+    <attr name="drawableHeight" format="dimension|reference" />
+    <attr name="borderColor" format="reference|color" />
+    <attr name="borderWidth" format="dimension|reference" />
+
+    <declare-styleable name="DrawableButton">
+        <attr name="drawableWidth" />
+        <attr name="drawableHeight" />
+    </declare-styleable>
+
+    <declare-styleable name="Ratio">
+        <attr name="ratio" format="float" />
+    </declare-styleable>
+
+    <!-- Image View -->
+    <attr name="imageViewStyle" format="reference" />
+    <declare-styleable name="ImageView">
+        <attr name="loadingDrawable" format="reference" />
+        <attr name="errorDrawable" format="reference" />
+        <attr name="errorDrawableRound" format="reference" />
+        <attr name="ratioX" format="dimension|reference" />
+        <attr name="ratioY" format="dimension|reference" />
+        <attr name="borderRadius" format="dimension|reference" />
+        <attr name="borderWidth" />
+        <attr name="borderPadding" format="dimension|dimension" />
+        <attr name="borderColor" />
+    </declare-styleable>
+
+    <!-- Battery View -->
+    <attr name="batteryViewStyle" format="reference" />
+    <declare-styleable name="BatteryView">
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="borderColor" />
+        <attr name="capacityBackgroundColor" format="reference|color" />
+        <attr name="borderWidth" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="power" format="integer" />
+    </declare-styleable>
+
+    <!-- FlowLayout -->
+    <attr name="flowLayoutStyle" format="reference" />
+    <declare-styleable name="FlowLayout">
+        <attr name="android:horizontalSpacing" />
+        <attr name="android:verticalSpacing" />
+        <attr name="android:gravity" />
+        <attr name="android:singleLine" />
+    </declare-styleable>
+
+
+    <declare-styleable name="voiceView">
+        <!--中间线的颜色，就是波形的时候，大家可以看到，中间有一条直线，就是那个-->
+        <attr name="middleLine" format="color" />
+        <!--中间线的高度，因为宽度是充满的-->
+        <attr name="middleLineHeight" format="dimension" />
+        <!--波动的线的颜色，如果是距形样式的话，刚是距形的颜色-->
+        <attr name="voiceLine" format="color" />
+        <!--波动线的横向移动速度，线的速度的反比，即这个值越小，线横向移动越快，越大线移动越慢，默认90-->
+        <attr name="lineSpeed" format="integer" />
+        <!--矩形的宽度-->
+        <attr name="rectWidth" format="dimension" />
+        <!--矩形之间的间隔-->
+        <attr name="rectSpace" format="dimension" />
+        <!--矩形的初始高度，就是没有声音的时候，矩形的高度-->
+        <attr name="rectInitHeight" format="dimension" />
+        <!--所输入音量的最大值-->
+        <attr name="maxVolume" format="float" />
+        <!--控件的样式，一共有两种，波形或者矩形-->
+        <attr name="viewMode">
+            <enum name="line" value="0" />
+            <enum name="rect" value="1" />
+        </attr>
+        <!--灵敏度，默认值是4-->
+        <attr name="sensibility">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+        <!--精细度，绘制曲线的时候，每几个像素绘制一次，默认是1，一般，这个值越小，曲线越顺滑，
+            但在一些旧手机上，会出现帧率过低的情况，可以把这个值调大一点，在图片的顺滑度与帧率之间做一个取舍-->
+        <attr name="fineness">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

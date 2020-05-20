@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ln.base.view.TitleBar
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:text="@string/about_ljb" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_ljb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="34dp"
+            android:paddingBottom="@dimen/spacing_normal">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_ljb" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text=""
+                android:textSize="@dimen/size_normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_ljb"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.ln.base.view.Preference
+                android:id="@+id/pr_official_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white"
+                android:hint="@string/contact_number"
+                android:onClick="onClick"
+                android:src="@drawable/ic_arrow_right"
+                android:text="@string/official_contact" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:background="@color/divider" />
+
+            <com.ln.base.view.Preference
+                android:id="@+id/pr_beta_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white"
+                android:text="@string/beta_version" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:background="@color/divider" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_bottom"
+            android:layout_below="@id/ll_pr"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_upgrade_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/spacing_normal"
+                    android:paddingTop="@dimen/spacing_normal"
+                    android:text="@string/beta_version_content" />
+
+                <TextView
+                    android:id="@+id/tv_upgrade_info_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/spacing_normal"
+                    android:text="" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacing_small"
+            android:paddingBottom="@dimen/spacing_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_empty_cn_radius"
+                    android:onClick="onClick"
+                    android:padding="0dp"
+                    android:text="@string/service_protocol"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/size_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0dp"
+                    android:text="@string/and"
+                    android:textSize="@dimen/size_small" />
+
+                <TextView
+                    android:id="@+id/tv_privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_empty_cn_radius"
+                    android:onClick="onClick"
+                    android:padding="0dp"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/base"
+                    android:textSize="@dimen/size_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_smallest"
+                android:text="@string/copy_right"
+                android:textColor="@color/text_light"
+                android:textSize="@dimen/size_small" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

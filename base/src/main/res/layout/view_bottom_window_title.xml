@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_window"
+    android:padding="@dimen/spacing_smaller">
+
+    <TextView
+        android:id="@+id/bottom_window_cancel"
+        style="@style/TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/cancel"
+        android:textColor="@color/base"
+        android:textSize="@dimen/size_biggest" />
+
+    <TextView
+        android:id="@+id/bottom_window_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/text_dark"
+        android:textSize="@dimen/size_biggest" />
+
+    <TextView
+        android:id="@+id/bottom_window_confirm"
+        style="@style/TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/ok"
+        android:textColor="@color/base"
+        android:textSize="@dimen/size_biggest" />
+
+</RelativeLayout>

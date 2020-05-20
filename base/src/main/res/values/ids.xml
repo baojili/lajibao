@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="dialog_button_confirm" type="id" />
+    <item name="dialog_button_cancel" type="id" />
+
+    <item name="title_view" type="id" />
+    <item name="loading_view" type="id" />
+
+    <item name="tab" type="id" />
+    <item name="view_pager" type="id" />
+    <item name="pager_indicator" type="id" />
+
+    <item name="web_view" type="id" />
+    <item name="web_view_progress_bar" type="id" />
+
+    <item name="tag_first" type="id"></item>
+    <item name="tag_second" type="id"></item>
+
+</resources>

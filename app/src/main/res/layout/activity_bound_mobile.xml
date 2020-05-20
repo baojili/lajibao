@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <com.ln.base.view.TitleBar
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:text="@string/bind_mobile_number" />
+
+    <ImageView
+        android:id="@+id/iv_mobile"
+        android:layout_width="61dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/title_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_mobile_bound" />
+
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_mobile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text=""
+        android:textColor="@color/text_dark" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mobile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/bind_tips"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/size_smaller" />
+
+    <Button
+        android:id="@+id/bt_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tips"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/spacing_biggest"
+        android:layout_marginTop="49dp"
+        android:layout_marginRight="@dimen/spacing_biggest"
+        android:background="@drawable/bg_base_cn_radius_biggest"
+        android:enabled="true"
+        android:onClick="onClick"
+        android:text="@string/modify_password" />
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.MobileLoginActivity">
+
+    <com.ln.base.view.TitleBar
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_window"
+        android:text="@string/mobile_login" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_biggest"
+        android:paddingTop="51dp">
+
+        <RadioGroup
+            android:id="@+id/tab"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/spacing_smallest">
+
+            <RadioButton
+                style="@style/TabItem"
+                android:layout_marginLeft="@dimen/spacing_smaller"
+                android:layout_marginRight="@dimen/spacing_smaller"
+                android:background="@drawable/bg_empty_pr_null"
+                android:text="@string/login"
+                android:textSize="@dimen/size_biggest" />
+
+            <RadioButton
+                style="@style/TabItem"
+                android:layout_marginLeft="@dimen/spacing_smaller"
+                android:layout_marginRight="@dimen/spacing_smaller"
+                android:background="@drawable/bg_empty_pr_null"
+                android:text="@string/register" />
+
+        </RadioGroup>
+
+        <com.ln.base.view.PagerIndicator
+            android:id="@id/pager_indicator"
+            style="@style/PagerIndicatorLine"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

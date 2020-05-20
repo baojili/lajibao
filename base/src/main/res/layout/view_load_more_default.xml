@@ -1,0 +1,21 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_smaller"
+        android:paddingTop="@dimen/spacing_big"
+        android:paddingRight="@dimen/spacing_smaller"
+        android:paddingBottom="@dimen/spacing_big"
+        android:singleLine="true"
+        android:text="@string/loading_wait"
+        android:textColor="@color/base"
+        android:textSize="@dimen/size_small" />
+
+</merge>

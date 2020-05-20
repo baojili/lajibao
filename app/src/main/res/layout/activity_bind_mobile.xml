@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <com.ln.base.view.TitleBar
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:text="@string/bind_mobile_number" />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_view"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size_normal"
+        android:paddingRight="@dimen/size_normal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/mobile_number" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:gravity="right|center_vertical"
+                android:hint="@string/input_phone"
+                android:inputType="number"
+                android:maxLines="1"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider" />
+
+        <RelativeLayout
+            android:id="@+id/ll_sms_code"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/sms_code" />
+
+            <EditText
+                android:id="@+id/et_sms_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/spacing_smaller"
+                android:layout_toStartOf="@id/tv_get_sms_code"
+                android:layout_toLeftOf="@id/tv_get_sms_code"
+                android:background="@color/transparent"
+                android:gravity="right|center_vertical"
+                android:hint="@string/hint_input_sms_code"
+                android:inputType="number"
+                android:maxLines="1"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_get_sms_code"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_white_bd_divider_cn_radius_biggest"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:paddingLeft="@dimen/spacing_smaller"
+                android:paddingTop="@dimen/spacing_smallest"
+                android:paddingRight="@dimen/spacing_smaller"
+                android:paddingBottom="@dimen/spacing_smallest"
+                android:text="@string/get_sms_code"
+                android:textSize="@dimen/size_small" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider" />
+
+        <RelativeLayout
+            android:id="@+id/ll_password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/new_password" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:gravity="right|center_vertical"
+                android:hint="@string/input_new_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                tools:ignore="RtlHardcoded" />
+
+            <ImageView
+                android:id="@+id/iv_show_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/et_password"
+                android:background="@drawable/bg_empty_cn_radius"
+                android:onClick="onClick"
+                android:padding="@dimen/spacing_smallest"
+                android:src="@drawable/ic_show"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/confirm_password" />
+
+            <EditText
+                android:id="@+id/et_password_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:gravity="right|center_vertical"
+                android:hint="@string/input_new_password_again"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_main"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/bind_tips"
+        android:textColor="@color/red"
+        android:textSize="@dimen/size_smaller" />
+
+    <Button
+        android:id="@+id/bt_bind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/spacing_biggest"
+        android:layout_marginRight="@dimen/spacing_biggest"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/bg_base_cn_radius_biggest"
+        android:enabled="false"
+        android:onClick="onClick"
+        android:text="@string/bind" />
+</RelativeLayout>

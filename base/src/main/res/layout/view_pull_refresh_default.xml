@@ -1,0 +1,28 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pull_refresh" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_smaller"
+        android:paddingTop="@dimen/spacing_bigger"
+        android:paddingRight="@dimen/spacing_smaller"
+        android:paddingBottom="@dimen/spacing_bigger"
+        android:singleLine="true"
+        android:text="@string/pull_down_refresh"
+        android:textColor="@color/base"
+        android:textSize="@dimen/size_small" />
+
+</merge>

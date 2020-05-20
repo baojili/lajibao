@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFiles 'proguard-rules.pro'
+            buildConfigField("boolean", "ENABLE_DEBUG", "false")
+        }
+        debug {
+            consumerProguardFiles 'proguard-rules.pro'
+            buildConfigField("boolean", "ENABLE_DEBUG", "true")
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    api "com.squareup.okhttp3:logging-interceptor:3.12.0"
+    api 'com.orhanobut:logger:2.2.0'
+    api 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    api 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    api 'com.squareup.retrofit2:retrofit:2.5.0'
+    api 'com.squareup.retrofit2:converter-gson:2.5.0'
+    //api 'com.squareup.retrofit2:converter-jackson:2.5.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    api 'com.fasterxml.jackson.core:jackson-core:2.9.10'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.9.10'
+    api 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.10'
+    /*api 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.10'
+    api 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.10'*/
+
+    api 'com.jakewharton.threetenabp:threetenabp:1.2.1'
+    api 'com.yanzhenjie:permission:2.0.3'
+    api 'androidx.multidex:multidex:2.0.1'
+}

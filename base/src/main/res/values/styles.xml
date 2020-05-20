@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+    <!--<style name="BaseTheme" parent="@android:style/Theme.Light.NoTitleBar"/>-->
+    <style name="BaseDialog" parent="@android:style/Theme.Dialog" />
+
+    <style name="BaseProgressBar" parent="@android:style/Widget.ProgressBar" />
+
+    <style name="BaseListView" parent="@android:style/Widget.ListView" />
+
+    <style name="BaseEditText" parent="@android:style/Widget.EditText" />
+
+    <style name="BaseTextView" parent="@android:style/Widget.TextView" />
+
+    <style name="BaseButton" parent="@android:style/Widget.Button" />
+
+    <style name="BaseRadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:paddingLeft">@dimen/spacing_biggest</item>
+        <item name="android:paddingRight">@dimen/spacing_smaller</item>
+        <item name="android:paddingTop">@dimen/spacing_smallest</item>
+        <item name="android:paddingBottom">@dimen/spacing_smallest</item>
+    </style>
+
+    <style name="BaseCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:paddingLeft">@dimen/spacing_biggest</item>
+        <item name="android:paddingRight">@dimen/spacing_smaller</item>
+        <item name="android:paddingTop">@dimen/spacing_smallest</item>
+        <item name="android:paddingBottom">@dimen/spacing_smallest</item>
+    </style>
+
+    <style name="Button" parent="BaseButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:paddingLeft">@dimen/spacing_small</item>
+        <item name="android:paddingRight">@dimen/spacing_small</item>
+        <item name="android:background">@drawable/bg_base_cn_radius_big</item>
+    </style>
+
+    <style name="EditText" parent="BaseEditText">
+        <item name="android:minHeight">@dimen/edit_text_height</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorHint">#bbbbbb</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:paddingLeft">@dimen/spacing_small</item>
+        <item name="android:paddingRight">@dimen/spacing_small</item>
+    </style>
+
+    <style name="EditText.NoUnderline" parent="EditText">
+        <!--colorControlNormal 为没有获取焦点时候下划线的颜色-->
+        <!--colorControlActivated 为获取焦点时候下划线的颜色-->
+        <item name="colorControlNormal">@null</item>
+        <item name="colorControlActivated">@null</item>
+    </style>
+
+    <style name="TextView" parent="BaseTextView">
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <!-- <item name="android:button">@drawable/ic_check_box</item> -->
+    <style name="CheckBox" parent="BaseCheckBox">
+        <item name="android:button">@drawable/bg_check_box</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="RadioButton" parent="BaseRadioButton">
+        <item name="android:button">@drawable/bg_radio</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:background">@drawable/bg_empty_cn_radius</item>
+    </style>
+
+    <style name="ProgressBar" parent="BaseProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/ic_progress</item>
+        <item name="android:indeterminateDuration">1000</item>
+        <item name="android:minWidth">@dimen/length_big</item>
+        <item name="android:maxWidth">@dimen/length_big</item>
+        <item name="android:minHeight">@dimen/length_big</item>
+        <item name="android:maxHeight">@dimen/length_big</item>
+    </style>
+
+    <style name="BatteryView">
+        <item name="orientation">horizontal</item>
+        <item name="capacityBackgroundColor">#77FFFFFF</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="borderColor">@color/black</item>
+        <item name="borderWidth">@dimen/radius_big</item>
+    </style>
+
+    <style name="FlowLayout">
+        <item name="android:horizontalSpacing">@dimen/spacing_small</item>
+        <item name="android:verticalSpacing">@dimen/spacing_small</item>
+    </style>
+
+    <style name="WheelPicker">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:background">@color/white</item>
+        <item name="selectedTextSize">@dimen/size_biggestst</item>
+        <item name="android:textColorHighlight">@color/text_dark</item>
+        <item name="android:textSize">@dimen/size_bigges</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorHint">@color/text_light</item>
+        <item name="android:divider">@color/divider</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:foreground">#06000000</item>
+        <item name="android:fadingEdgeLength">80dp</item>
+        <item name="fadingEdgeColor">#ffffff</item>
+        <item name="android:paddingLeft">@dimen/spacing_smaller</item>
+        <item name="android:paddingRight">@dimen/spacing_smaller</item>
+        <item name="android:lines">5</item>
+        <item name="hintSpacing">@dimen/spacing_biggest</item>
+        <item name="cyclic">false</item>
+    </style>
+
+    <style name="ListView" parent="BaseListView">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">@dimen/spacing_small</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:divider">@color/divider</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:listSelector">@drawable/bg_empty_pr_null</item>
+        <item name="android:textColorHint">@color/text_light</item>
+        <item name="textSizeHint">@dimen/size_normal</item>
+        <item name="emptyViewTip">@string/no_data</item>
+        <item name="emptyViewIcon">@drawable/im_error</item>
+    </style>
+
+    <style name="GridView" parent="@android:style/Widget.GridView">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">@dimen/spacing_small</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:listSelector">@color/transparent</item>
+    </style>
+
+    <style name="Dialog" parent="BaseDialog">
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/DialogWindowAnimation</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="dialogButtonStyle">@style/DialogButton</item>
+        <item name="dialogButtonLeftStyle">@style/DialogButton.Left</item>
+        <item name="dialogButtonRightStyle">@style/DialogButton.Right.Light</item>
+    </style>
+
+    <style name="Dialog.Transparent" parent="Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="DialogTitle">
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:paddingLeft">@dimen/spacing_bigger</item>
+        <item name="android:paddingRight">@dimen/spacing_bigger</item>
+        <item name="android:paddingTop">@dimen/spacing_big</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="DialogAlert">
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:paddingTop">28dp</item>
+        <item name="android:paddingBottom">28dp</item>
+        <item name="android:paddingLeft">@dimen/spacing_normal</item>
+        <item name="android:paddingRight">@dimen/spacing_normal</item>
+    </style>
+
+    <style name="DialogInput" parent="EditText">
+        <item name="android:layout_margin">@dimen/spacing_normal</item>
+        <item name="android:paddingTop">@dimen/spacing_small</item>
+        <item name="android:paddingBottom">@dimen/spacing_small</item>
+    </style>
+
+    <style name="DialogButton" parent="BaseButton">
+        <item name="android:textColor">@color/base</item>
+        <item name="android:minHeight">@dimen/length_biggest</item>
+        <item name="android:background">@drawable/bg_dialog_button</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+    </style>
+
+    <style name="DialogButton.Left">
+        <item name="android:background">@drawable/bg_dialog_button_left</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+    </style>
+
+    <style name="DialogButton.Right">
+        <item name="android:background">@drawable/bg_dialog_button_right</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+    </style>
+
+    <style name="DialogButton.Right.Light">
+        <item name="android:background">@drawable/bg_dialog_button_right_light</item>
+        <item name="android:textColor">@color/base</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+    </style>
+
+    <style name="ToastDialog" parent="BaseDialog">
+        <item name="android:windowBackground">@drawable/bg_toast_dialog</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="toastDialogIconStyle">@style/ToastDialogIcon</item>
+        <item name="toastDialogTextStyle">@style/ToastDialogText</item>
+    </style>
+
+    <style name="ToastDialogIcon">
+        <item name="android:minWidth">@dimen/length_big</item>
+        <item name="android:maxWidth">@dimen/length_big</item>
+        <item name="android:minHeight">@dimen/length_big</item>
+        <item name="android:maxHeight">@dimen/length_big</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="ToastDialogText">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:minHeight">@dimen/length_big</item>
+    </style>
+
+    <style name="ImageView">
+        <item name="loadingDrawable">@color/gray_light</item>
+        <item name="errorDrawable">@color/gray_light</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="Preference">
+        <item name="android:background">@drawable/bg_white</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorHint">@color/text_light</item>
+        <item name="android:drawablePadding">@dimen/spacing_smaller</item>
+    </style>
+
+    <style name="TitleBar">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="leftIcon">@drawable/bg_title_back</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="TitleBar.BackButton">
+        <!--<item name="leftIcon">@drawable/bg_title_back</item>-->
+    </style>
+
+    <style name="LoadingView">
+        <item name="android:text">@string/no_data</item>
+        <item name="android:src">@drawable/im_error</item>
+    </style>
+
+    <style name="Theme" parent="BaseTheme">
+        <item name="android:windowBackground">@color/bg_window</item>
+        <!-- <item name="android:fitsSystemWindows">true</item> -->
+        <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:checkboxStyle">@style/CheckBox</item>
+        <item name="android:radioButtonStyle">@style/RadioButton</item>
+        <item name="android:listViewStyle">@style/ListView</item>
+        <item name="android:gridViewStyle">@style/GridView</item>
+        <item name="android:editTextStyle">@style/EditText</item>
+        <item name="android:textViewStyle">@style/TextView</item>
+        <item name="android:progressBarStyle">@style/ProgressBar</item>
+        <item name="android:scrollbarThumbVertical">@drawable/ic_scrollbar</item>
+        <item name="wheelPickerStyle">@style/WheelPicker</item>
+        <item name="batteryViewStyle">@style/BatteryView</item>
+        <item name="flowLayoutStyle">@style/FlowLayout</item>
+        <item name="dialogStyle">@style/Dialog</item>
+        <item name="dialogTransparentStyle">@style/Dialog.Transparent</item>
+        <item name="dialogTitleStyle">@style/DialogTitle</item>
+        <item name="dialogAlertStyle">@style/DialogAlert</item>
+        <item name="dialogInputStyle">@style/DialogInput</item>
+        <item name="toastDialogStyle">@style/ToastDialog</item>
+        <item name="imageViewStyle">@style/ImageView</item>
+        <item name="preferenceStyle">@style/Preference</item>
+        <item name="titleBarStyle">@style/TitleBar</item>
+        <item name="loadingViewStyle">@style/LoadingView</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TextButton">
+        <item name="android:background">@drawable/bg_empty_cn_radius</item>
+        <item name="android:paddingLeft">@dimen/spacing_smaller</item>
+        <item name="android:paddingRight">@dimen/spacing_smaller</item>
+        <item name="android:paddingTop">@dimen/spacing_smallest</item>
+        <item name="android:paddingBottom">@dimen/spacing_smallest</item>
+    </style>
+
+    <style name="PopupWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_menu_show</item>
+        <item name="android:windowExitAnimation">@anim/popup_menu_hide</item>
+    </style>
+
+    <style name="BottomWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_show</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_hide</item>
+    </style>
+
+    <style name="DialogWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="TabItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/tab_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@drawable/text_tab_item</item>
+        <item name="android:textSize">@dimen/size_normal</item>
+        <item name="android:background">@drawable/bg_white</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!--<style name="PagerIndicatorDotWhiteBdWhite30">
+        <item name="android:drawable">@drawable/ic_pager_indicator_white_bd_white_30</item>
+        <item name="android:spacing">@dimen/spacing_small</item>
+        <item name="transition">slide</item>
+    </style>-->
+
+    <style name="PagerIndicatorLine">
+        <item name="android:drawable">@drawable/ic_pager_indicator_divider</item>
+        <item name="transition">slide</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="HomeTabItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/size_smaller</item>
+        <item name="android:textColor">@drawable/text_main_tab</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingTop">@dimen/spacing_smaller</item>
+        <item name="android:paddingBottom">@dimen/spacing_smaller</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="WindowAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_left_show</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_hide</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_right_show</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_hide</item>
+        <item name="android:taskOpenEnterAnimation">@anim/slide_left_show</item>
+        <item name="android:taskOpenExitAnimation">@anim/slide_left_hide</item>
+        <item name="android:taskCloseEnterAnimation">@anim/slide_right_show</item>
+        <item name="android:taskCloseExitAnimation">@anim/slide_right_hide</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/slide_left_show</item>
+        <item name="android:taskToFrontExitAnimation">@anim/slide_left_hide</item>
+        <item name="android:taskToBackEnterAnimation">@anim/slide_right_show</item>
+        <item name="android:taskToBackExitAnimation">@anim/slide_right_hide</item>
+    </style>
+</resources>

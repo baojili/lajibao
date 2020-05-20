@@ -1,0 +1,30 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/loading_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/spacing_smallest" />
+
+    <TextView
+        android:id="@+id/loading_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/spacing_normal"
+        android:textColor="@color/text" />
+
+    <Button
+        android:id="@+id/loading_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_bigger"
+        android:background="@drawable/bg_empty_bd_base_cn_radius_big"
+        android:minHeight="@dimen/length_big"
+        android:text="@string/retry"
+        android:textColor="@color/base"
+        android:visibility="gone" />
+
+</merge>

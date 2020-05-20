@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="spacing_biggest">28dp</dimen>
+    <dimen name="spacing_bigger">24dp</dimen>
+    <dimen name="spacing_big">20dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_normal_negative">-16dp</dimen>
+    <dimen name="spacing_small">12dp</dimen>
+    <dimen name="spacing_smaller">8dp</dimen>
+    <dimen name="spacing_smallest">4dp</dimen>
+    <dimen name="length_biggest">48dp</dimen>
+    <dimen name="length_big">32dp</dimen>
+    <!-- 字体大小 -->
+    <dimen name="size_biggestst">40sp</dimen>
+    <dimen name="size_biggest">30sp</dimen>
+    <dimen name="size_bigger">20sp</dimen>
+    <dimen name="size_big">18sp</dimen>
+    <dimen name="size_normal">16sp</dimen>
+    <dimen name="size_small">14sp</dimen>
+    <dimen name="size_smaller">12sp</dimen>
+    <dimen name="size_smallest">10sp</dimen>
+    <!-- 圆角大小 -->
+    <dimen name="radius_biggest">24dp</dimen>
+    <dimen name="radius_big">4dp</dimen>
+    <dimen name="radius">3dp</dimen>
+    <!-- 高度 -->
+    <dimen name="title_bar_height">48dp</dimen>
+    <dimen name="button_height">44dp</dimen>
+    <dimen name="edit_text_height">44dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <!-- 其它 -->
+
+</resources>

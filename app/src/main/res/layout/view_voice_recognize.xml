@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_normal">
+
+    <ImageView
+        android:id="@+id/iv_dialog_close"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_empty_cn_radius"
+        android:padding="@dimen/spacing_smallest"
+        android:src="@drawable/ic_fork" />
+
+    <LinearLayout
+        android:id="@+id/ll_speaking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_speak_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/pls_speak_listening"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/size_big" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/you_can_see_like_this"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/size_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/voice_recognize_sample_text"
+                android:textSize="@dimen/size_small" />
+        </RelativeLayout>
+
+        <com.ln.base.view.VoiceLineView
+            android:id="@+id/view_voice_Line"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="@dimen/spacing_bigger"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="@dimen/spacing_bigger"
+            app:fineness="three"
+            app:maxVolume="2000"
+            app:middleLineHeight="1dp"
+            app:rectSpace="2dp"
+            app:rectWidth="2dp"
+            app:sensibility="four"
+            app:viewMode="rect"
+            app:voiceLine="@color/base" />
+
+        <LinearLayout
+            android:id="@+id/ll_stop_voice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:background="@drawable/bg_base_cn_radius_biggest"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_record_transparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smallest"
+                android:text="@string/press_to_stop_voice"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_recognize_fail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/recognize_fail_pls_again"
+            android:textColor="@color/base"
+            android:textSize="@dimen/size_big" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/you_can_see_like_this"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/size_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/voice_recognize_sample_text"
+                android:textSize="@dimen/size_small" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/spacing_bigger"
+            android:layout_marginBottom="@dimen/spacing_bigger" />
+
+        <LinearLayout
+            android:id="@+id/ll_resume_voice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:background="@drawable/bg_base_cn_radius_biggest"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_record_transparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smallest"
+                android:text="@string/press_to_resume_voice"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_recognizing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/voice_recognizing"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/size_big" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/recognizing_pls_wait"
+                android:textSize="@dimen/size_small" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:indeterminateDrawable="@drawable/bg_progress_green" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

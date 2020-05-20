@@ -1,0 +1,3 @@
+include ':app', ':mp3Recorder'
+include ':base'
+rootProject.name = 'My Application'

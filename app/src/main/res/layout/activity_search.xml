@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/spacing_smallest"
+        android:paddingBottom="@dimen/spacing_smallest">
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:layout_weight="1"
+            android:background="@drawable/bg_gray_light_cn_radius_biggest">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_smallest"
+                android:padding="@dimen/spacing_smaller"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                style="@style/EditText.NoUnderline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/spacing_bigger"
+                android:layout_toRightOf="@id/iv_search"
+                android:background="@color/transparent"
+                android:hint="@string/input_correct_object_name"
+                android:imeOptions="actionSearch"
+                android:padding="@dimen/spacing_smaller" />
+
+            <ImageView
+                android:id="@+id/iv_camera"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/spacing_smaller"
+                android:background="@drawable/bg_empty_cn_radius"
+                android:padding="@dimen/spacing_smaller"
+                android:src="@drawable/ic_camera"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_search"
+            style="@style/TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:onClick="onClick"
+            android:text="@string/cancel"
+            android:textColor="@color/base" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:text="@string/hot_search"
+                android:textColor="@color/text_light" />
+
+            <com.ln.base.view.FlowLayout
+                android:id="@+id/fl_pop_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_biggest"
+                android:layout_marginBottom="@dimen/spacing_biggest"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:paddingRight="@dimen/spacing_normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/search_history"
+                    android:textColor="@color/text_light" />
+
+                <ImageView
+                    android:id="@+id/iv_crash"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/spacing_smaller"
+                    android:background="@drawable/bg_empty_cn_radius"
+                    android:onClick="onClick"
+                    android:padding="@dimen/spacing_smaller"
+                    android:src="@drawable/ic_crash"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <com.ln.base.view.FlowLayout
+                android:id="@+id/fl_search_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_biggest"
+                android:layout_marginBottom="@dimen/spacing_biggest"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:paddingRight="@dimen/spacing_normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_empty"
+        android:onClick="onClick"
+        android:paddingLeft="@dimen/spacing_normal"
+        android:paddingTop="@dimen/spacing_normal"
+        android:paddingRight="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_normal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/search"
+            android:textColor="@color/text_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/recycle_object" />
+
+    </RelativeLayout>
+
+    <com.ln.base.view.ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint=""
+        android:visibility="visible" />
+</LinearLayout>

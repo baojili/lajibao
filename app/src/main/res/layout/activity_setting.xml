@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <com.ln.base.view.TitleBar
+        android:id="@id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:text="@string/setting" />
+
+    <RelativeLayout
+        android:id="@+id/ll_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:background="@drawable/bg_white"
+        android:onClick="onClick"
+        android:padding="@dimen/spacing_normal">
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/avatar"
+            android:textColor="@color/text_dark" />
+
+        <com.ln.base.view.ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:src="@drawable/ic_avatar_default"
+            app:borderColor="@color/divider"
+            app:borderRadius="50dp"
+            app:borderWidth="0dp"
+            app:errorDrawable="@drawable/ic_avatar_default"
+            app:loadingDrawable="@drawable/ic_avatar_default" />
+    </RelativeLayout>
+
+    <com.ln.base.view.Preference
+        android:id="@+id/pr_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white"
+        android:onClick="onClick"
+        android:src="@drawable/ic_arrow_right"
+        android:text="@string/nick_name" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/spacing_normal"
+        android:layout_marginRight="@dimen/spacing_normal"
+        android:background="@color/divider" />
+
+    <com.ln.base.view.Preference
+        android:id="@+id/pr_we_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white"
+        android:hint="@string/to_bind"
+        android:src="@drawable/ic_arrow_right"
+        android:text="@string/we_chat"
+        android:textColorHint="@color/base" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/spacing_normal"
+        android:layout_marginRight="@dimen/spacing_normal"
+        android:background="@color/divider" />
+
+    <com.ln.base.view.Preference
+        android:id="@+id/pr_invitation_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white"
+        android:onClick="onClick"
+        android:text="@string/invitation_code" />
+
+    <com.ln.base.view.Preference
+        android:id="@+id/pr_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@drawable/bg_white"
+        android:hint="@string/to_bind"
+        android:onClick="onClick"
+        android:src="@drawable/ic_arrow_right"
+        android:text="@string/phone_number"
+        android:textColorHint="@color/base" />
+
+    <com.ln.base.view.Preference
+        android:id="@+id/pr_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:background="@drawable/bg_white"
+        android:onClick="onClick"
+        android:src="@drawable/ic_arrow_right"
+        android:text="@string/logout" />
+</LinearLayout>

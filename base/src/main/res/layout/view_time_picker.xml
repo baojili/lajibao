@@ -1,0 +1,20 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zndroid="http://schemas.android.com/apk/res-auto">
+
+    <com.ln.base.ui.view.WheelPicker
+        android:id="@+id/hour_wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:hint="@string/colon"
+        zndroid:cyclic="true" />
+
+    <com.ln.base.ui.view.WheelPicker
+        android:id="@+id/minute_wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="0dp"
+        zndroid:cyclic="true" />
+
+</merge>
